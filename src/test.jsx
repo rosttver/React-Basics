@@ -1,0 +1,1 @@
+const title2 = React.createElement('h1', null, 'React Todo');
