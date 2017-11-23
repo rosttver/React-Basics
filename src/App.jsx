@@ -4,6 +4,7 @@ import ReactDom from 'react-dom';
 import Header from './components/Header';
 import Todo from './components/Todo';
 import todos from './todos';
+import Form from './components/form';
 
 class App extends React.Component {
     constructor(props) {
@@ -37,7 +38,7 @@ class App extends React.Component {
     render(){
         return(
             <main>
-                <Header title={this.props.title} />
+                <Header title={this.props.title} todos={this.state.todos}/>
 
                 <section className="todo-list">
                     {this.state.todos.map(todo =>
@@ -51,6 +52,7 @@ class App extends React.Component {
                         />)
                     }
                 </section>
+                <Form />
             </main>
         )
     }
